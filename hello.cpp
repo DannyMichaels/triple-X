@@ -9,9 +9,10 @@ int main()
 {
   int difficulty = 2;
   int maxDifficulty = 10;
+
   while (difficulty <= maxDifficulty) {
-    // PlayGameAtDifficulty(difficulty)
-    std::cin.clear(); // clears the failbit
+    PlayGameAtDifficulty(difficulty);
+    std::cin.clear();  // clears the failbit
     std::cin.ignore(); // discards the buffer
     ++difficulty;
   }
