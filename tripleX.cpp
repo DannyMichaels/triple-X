@@ -21,19 +21,19 @@ int main() // main function
 
   std::cout << "Enter the correct code to continue...";
 
-  const int a = 4; // declaration statements
-  const int b = 3;
-  const int c = 2;
+  const int codeA = 4; // declaration statements
+  const int codeB = 3;
+  const int codeC = 2;
 
-  
-  const int sum = a + b + c;
-  const int product = a * b * c;
+            // camelCase like javascript <3
+  const int codeSum = codeA + codeB + codeC;
+  const int codeProduct = codeA * codeB * codeC;
 
   std::cout << std::endl;  // expression statements
 
-  std::cout << "There are 3 numbers in the code" << std::endl; // expression statements
-  std::cout << "The codes add-up to: " << sum << std::endl;
-  std::cout << "The codes multiply to give: " << product << std::endl;
+  std::cout << "+ There are 3 numbers in the code" << std::endl; // expression statements
+  std::cout << "+ The codes add-up to: " << codeSum << std::endl;
+  std::cout << "+ The codes multiply to give: " << codeProduct << std::endl;
 
   // std::cout << "WOW - You're a master hacker!\n";
   return 0; // exit with no error code.
