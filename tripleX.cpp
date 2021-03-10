@@ -29,7 +29,8 @@ int main() // main function
   const int CodeSum = CodeA + CodeB + CodeC;
   const int CodeProduct = CodeA * CodeB * CodeC;
 
-  std::cout << std::endl;  // expression statements
+
+  std::cout << std::endl; // expression statements
 
   std::cout << "+ There are 3 numbers in the code" << std::endl; // expression statements
   std::cout << "+ The codes add-up to: " << CodeSum << std::endl;
@@ -39,8 +40,10 @@ int main() // main function
   std::cin >> GuessA;
   std::cin >> GuessB;
   std::cin >> GuessC;
+  
+  const int GuessSum = GuessA + GuessB + GuessC;
+  const int GuessProduct = GuessA * GuessB * GuessC;
 
-  std::cout << "You entered: " << GuessA << GuessB << GuessC;
   // std::cout << "WOW - You're a master hacker!\n";
   return 0; // exit with no error code.
 }
