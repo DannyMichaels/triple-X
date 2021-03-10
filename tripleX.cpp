@@ -44,7 +44,9 @@ int main() // main function
   const int GuessSum = GuessA + GuessB + GuessC;
   const int GuessProduct = GuessA * GuessB * GuessC;
 
-  if (GuessProduct == CodeProduct)
+  const bool GuessedCorrectly = GuessSum == CodeSum && GuessProduct == CodeProduct;
+  
+  if (GuessedCorrectly)
   {
     std::cout << "you win!";
   }
