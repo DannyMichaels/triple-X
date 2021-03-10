@@ -2,11 +2,6 @@
 #include <ctime>
 
 void PlayGameAtDifficulty(int difficulty) {
-  return;
-}
-
-int main() // main function
-{
   // int difficulty = 2;
   // int maxDifficulty = 10;
 
@@ -16,6 +11,11 @@ int main() // main function
   //   std::cin.ignore(); // discards the buffer
   //   ++difficulty;
   // }
+  // std::cout << "WOW - You're a master hacker!\n";
+  return;
+}
+
+void PlayGame() {
   std::cout << "You are a secret agent breaking into a secure server room..."; // expression statements
   std::cout << std::endl; 
 
@@ -32,28 +32,35 @@ int main() // main function
 
   std::cout << std::endl; // expression statements
 
-  std::cout << "+ There are 3 numbers in the code" << std::endl; // expression statements
-  std::cout << "+ The codes add-up to: " << CodeSum << std::endl;
-  std::cout << "+ The codes multiply to give: " << CodeProduct << std::endl;
+  std::cout << "+ There are 3 numbers in the code"; // expression statements
+  std::cout << "\n+ The codes add-up to: " << CodeSum;
+  std::cout << "\n+ The codes multiply to give: " << CodeProduct << std::endl;
 
   int GuessA, GuessB, GuessC;
-  std::cin >> GuessA;
-  std::cin >> GuessB;
-  std::cin >> GuessC;
-  
+  std::cin >> GuessA >> GuessB >> GuessC;
+
   const int GuessSum = GuessA + GuessB + GuessC;
   const int GuessProduct = GuessA * GuessB * GuessC;
 
-  const bool GuessedCorrectly = GuessSum == CodeSum && GuessProduct == CodeProduct;
   
+  const bool GuessedCorrectly = GuessSum == CodeSum && GuessProduct == CodeProduct;
+ 
   if (GuessedCorrectly)
   {
     std::cout << "you win!";
   }
   else
   {
-    std::cout << "you lose!";
+    std::cout << "you lose!\n";
   }
-  // std::cout << "WOW - You're a master hacker!\n";
+
+
+
+}
+
+int main() // main function
+{
+
+  PlayGame();
   return 0; // exit with no error code.
 }
