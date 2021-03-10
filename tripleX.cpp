@@ -44,6 +44,14 @@ int main() // main function
   const int GuessSum = GuessA + GuessB + GuessC;
   const int GuessProduct = GuessA * GuessB * GuessC;
 
+  if (GuessProduct == CodeProduct)
+  {
+    std::cout << "you win!";
+  }
+  else
+  {
+    std::cout << "you lose!";
+  }
   // std::cout << "WOW - You're a master hacker!\n";
   return 0; // exit with no error code.
 }
