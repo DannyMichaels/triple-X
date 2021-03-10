@@ -34,3 +34,15 @@ Try adding /EHsc to the end of the command:
 cl main.cpp /EHsc
 
 For further reading: https://docs.microsoft.com/en-us/cpp/build/reference/eh-exception-handling-model?view=vs-2019
+
+# Getting User Input
+
+- cout = Character Output
+  Insertion Operator = <<
+
+- cin = character Input
+  Extraction Operator = >>
+
+- Characters like 'x' get converted to 0 with integers.
+
+- Chars like 'x' will halt cin from working until reset.
