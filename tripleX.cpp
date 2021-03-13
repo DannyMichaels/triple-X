@@ -9,9 +9,9 @@ void PrintIntroduction (int Difficulty) {
 bool PlayGame(int Difficulty) {
   PrintIntroduction(Difficulty);
 
-  const int CodeA = 4; // declaration statements
-  const int CodeB = 3;
-  const int CodeC = 2;
+  const int CodeA = rand() % Difficulty + Difficulty; // declaration statements
+  const int CodeB = rand() % Difficulty + Difficulty; // rand() untuned/uncontrolled returns a random number in the range 0 and a value that is guaranteed to be atleast 32,767. so we use Modulo operator, we also add another number to never get 0's
+  const int CodeC = rand() % Difficulty + Difficulty;
 
               // PascalCase... 
   const int CodeSum = CodeA + CodeB + CodeC;
@@ -32,19 +32,20 @@ bool PlayGame(int Difficulty) {
  
   if (GuessSum == CodeSum && GuessProduct == CodeProduct)
   {
-    std::cout << "\nyou win!\n";
+    std::cout << "\n*** Well done agent! You have extracted a file! Keep going! ***\n";
     return true;
   }
   else
   {
-    std::cout << "\nyou lose!\n";
+    std::cout << "\n*** You entered the wrong code! Careful agent! Try again! ***";
     return false;
   }
-
 }
 
 int main() // main function
 {
+  srand(time(NULL));
+
   int LevelDifficulty = 1;
   const int MaxDifficulty = 5;
 
@@ -59,6 +60,6 @@ int main() // main function
     }
 
   }
-  
+  std::cout << "\n*** Great work agent! You got all the files! Now get out of there! ***\n";
   return 0; // exit with no error code.
 }

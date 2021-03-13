@@ -46,3 +46,16 @@ For further reading: https://docs.microsoft.com/en-us/cpp/build/reference/eh-exc
 - Characters like 'x' get converted to 0 with integers.
 
 - Chars like 'x' will halt cin from working until reset.
+
+# Seeing rand()
+
+- We need to initialize rand() with a different seed
+  This will produce random results
+- The best way to do this is based on your computer's time
+- #include <ctime>
+- and the start of main add this line:
+
+```
+srand(time(NULL));
+// Creates new random sequence based on the time of day.
+```
