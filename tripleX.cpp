@@ -14,10 +14,10 @@ void PlayGameAtDifficulty(int difficulty) {
   // std::cout << "WOW - You're a master hacker!\n";
   return;
 }
-
+    
 void PrintIntroduction () {
-  std::cout << "\nYou are a secret agent breaking into a secure server room..."; // expression statements
-  std::cout << "\nEnter the correct code to continue...\n\n";
+  std::cout << "\nYou are a secret agent breaking into a" << LevelDifficulty; // expression statements
+  std::cout << "secure server room...\nEnter the correct code to continue...\n\n";
 }
 
 bool PlayGame() {
@@ -59,12 +59,18 @@ bool PlayGame() {
 
 int main() // main function
 {
+  int LevelDifficulty = 1;
   while (true)
   {
     bool bLevelComplete = PlayGame(); // boolean start with lowercase letter, it will get the result of PlayGame.
     PlayGame();
     std::cin.clear(); // Clears any errors
     std::cin.ignore(); // Discards the buffer
+
+    if (bLevelComplete) {
+      ++LevelDifficulty;
+    }
   }
+  
   return 0; // exit with no error code.
 }
