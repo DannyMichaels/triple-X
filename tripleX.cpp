@@ -15,13 +15,13 @@ void PlayGameAtDifficulty(int difficulty) {
   return;
 }
     
-void PrintIntroduction () {
-  std::cout << "\nYou are a secret agent breaking into a" << LevelDifficulty; // expression statements
-  std::cout << "secure server room...\nEnter the correct code to continue...\n\n";
+void PrintIntroduction (int Difficulty) {
+  std::cout << "\nYou are a secret agent breaking into a level " << Difficulty; // expression statements
+  std::cout << " secure server room...\nEnter the correct code to continue...\n\n";
 }
 
-bool PlayGame() {
-  PrintIntroduction();
+bool PlayGame(int Difficulty) {
+  PrintIntroduction(Difficulty);
 
   const int CodeA = 4; // declaration statements
   const int CodeB = 3;
@@ -44,7 +44,7 @@ bool PlayGame() {
   const int GuessSum = GuessA + GuessB + GuessC;
   const int GuessProduct = GuessA * GuessB * GuessC;  
  
-  if (GuessSum == CodeSum && GuessProduct == CodeProduct;)
+  if (GuessSum == CodeSum && GuessProduct == CodeProduct)
   {
     std::cout << "you win!\n";
     return true;
@@ -62,8 +62,7 @@ int main() // main function
   int LevelDifficulty = 1;
   while (true)
   {
-    bool bLevelComplete = PlayGame(); // boolean start with lowercase letter, it will get the result of PlayGame.
-    PlayGame();
+    bool bLevelComplete = PlayGame(LevelDifficulty); // boolean start with lowercase letter, it will get the result of PlayGame.
     std::cin.clear(); // Clears any errors
     std::cin.ignore(); // Discards the buffer
 
