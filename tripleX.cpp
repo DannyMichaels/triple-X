@@ -1,19 +1,5 @@
 #include <iostream> // Preprocessor directive
 #include <ctime>
-
-void PlayGameAtDifficulty(int difficulty) {
-  // int difficulty = 2;
-  // int maxDifficulty = 10;
-
-  // while (difficulty <= maxDifficulty) {
-  //   PlayGameAtDifficulty(difficulty);
-  //   std::cin.clear();  // clears the failbit
-  //   std::cin.ignore(); // discards the buffer
-  //   ++difficulty;
-  // }
-  // std::cout << "WOW - You're a master hacker!\n";
-  return;
-}
     
 void PrintIntroduction (int Difficulty) {
   std::cout << "\nYou are a secret agent breaking into a level " << Difficulty; // expression statements
@@ -46,12 +32,12 @@ bool PlayGame(int Difficulty) {
  
   if (GuessSum == CodeSum && GuessProduct == CodeProduct)
   {
-    std::cout << "you win!\n";
+    std::cout << "\nyou win!\n";
     return true;
   }
   else
   {
-    std::cout << "you lose!\n";
+    std::cout << "\nyou lose!\n";
     return false;
   }
 
@@ -60,7 +46,9 @@ bool PlayGame(int Difficulty) {
 int main() // main function
 {
   int LevelDifficulty = 1;
-  while (true)
+  const int MaxDifficulty = 5;
+
+  while (LevelDifficulty <= MaxDifficulty) // Loop game until all levels are completed
   {
     bool bLevelComplete = PlayGame(LevelDifficulty); // boolean start with lowercase letter, it will get the result of PlayGame.
     std::cin.clear(); // Clears any errors
@@ -69,6 +57,7 @@ int main() // main function
     if (bLevelComplete) {
       ++LevelDifficulty;
     }
+
   }
   
   return 0; // exit with no error code.
